@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  
+  <bean id="grade" class="ir.freeland.spring.springStu.xml.Grade"/>
+  <bean id="display" class="ir.freeland.spring.springStu.xml.Display"/>
+  <bean id="student" class="ir.freeland.spring.springStu.xml.Student"/>
+
+ 
+  <bean id="infoConstructor" class="ir.freeland.spring.springStu.xml.InfoConstructor">
+    <constructor-arg ref="grade"/>
+    <constructor-arg ref="display"/>
+    <constructor-arg ref="student"/>
+  </bean>
+  
+  <bean id="infoSetter" class="ir.freeland.spring.springStu.xml.InfoSetter"> 
+    <property name="grade" ref="grade"/> 
+    <property name="display" ref="display"/>
+    <property name="student" ref="student"/>
+  </bean>
+
+ 
+  
+
+</beans>
